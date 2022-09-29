@@ -2,7 +2,7 @@
 
 ## An application that make toys catalog as a Visualize tools that help fans better collecting. 
 
-*Transformers* toys are the one of the most popular toys in the worldwide, since they were first released since the 80s. **However**, because of the long-life development of the toy line, it is very difficult for fans to collect characters or different kind of version.
+*Transformers* toys are the one of the most popular toys in the worldwide, since they were first released in the 80s. **However**, because of the long-life development of the toy line, it is very difficult for fans to collect characters or different versions of toys.
 
 So the purpose of this application is to help users to collect toys like Encyclopedia does.
 
