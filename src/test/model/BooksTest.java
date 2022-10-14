@@ -29,6 +29,7 @@ class BooksTest {
         assertEquals(false, book1.getHaveBeenRead());
         assertEquals(false, book1.isHaveBeenReadThrough());
         book1.read();
+        assertEquals(1,book1.getProgressInPercent());
         assertEquals(true, book1.getHaveBeenRead());
         assertEquals(false, book1.isHaveBeenReadThrough());
         for(int i = 0; i < 99; i++) {
@@ -36,6 +37,12 @@ class BooksTest {
         }
         assertEquals(true, book1.getHaveBeenRead());
         assertEquals(true, book1.isHaveBeenReadThrough());
+        assertEquals(100, book1.getProgressInPercent());
+
+    }
+
+    @Test
+    void testBooks() {
 
     }
 

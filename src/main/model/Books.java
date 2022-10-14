@@ -9,15 +9,6 @@ public class Books {
     private boolean haveBeenRead;
     private boolean haveBeenReadThrough;
 
-    public Books(String bookName, String bookType, String categoryOfTheBook,
-                 double progressInPercent, boolean haveBeenRead, boolean haveBeenReadThrough) {
-        this.bookName = bookName;
-        this.bookType = bookType;
-        this.categoryOfTheBook = categoryOfTheBook;
-        this.progressInPercent = progressInPercent;
-        this.haveBeenRead = haveBeenRead;
-        this.haveBeenReadThrough = haveBeenReadThrough;
-    }
 
     public Books(String name, String type, String category) {
         this.bookName = name;
