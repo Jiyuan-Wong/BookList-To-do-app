@@ -2,9 +2,9 @@ package model;
 
 public class Books {
 
-    private String bookName;
-    private String bookType;
-    private String categoryOfTheBook;
+    private final String bookName;
+    private final String bookType;
+    private final String categoryOfTheBook;
     private double progressInPercent;
     private boolean haveBeenRead;
     private boolean haveBeenReadThrough;
@@ -46,11 +46,9 @@ public class Books {
 
     public void read() {
         progressInPercent += 1;
-        if (progressInPercent > 0) {
-            haveBeenRead = true;
-            if (progressInPercent >= 100) {
-                haveBeenReadThrough = true;
-            }
+        haveBeenRead = true;
+        if (progressInPercent >= 100) {
+            haveBeenReadThrough = true;
         }
     }
 

@@ -20,32 +20,25 @@ class BooksTest {
         assertEquals("e-book", book1.getBookType());
         assertEquals("books for study", book1.getCategoryOfTheBook());
         assertEquals(0, book1.getProgressInPercent());
-        assertEquals(false, book1.getHaveBeenRead());
-        assertEquals(false, book1.isHaveBeenReadThrough());
+        assertFalse(book1.getHaveBeenRead());
+        assertFalse(book1.isHaveBeenReadThrough());
     }
 
     @Test
     void testRead() {
-        assertEquals(false, book1.getHaveBeenRead());
-        assertEquals(false, book1.isHaveBeenReadThrough());
+        assertFalse(book1.getHaveBeenRead());
+        assertFalse(book1.isHaveBeenReadThrough());
         book1.read();
         assertEquals(1,book1.getProgressInPercent());
-        assertEquals(true, book1.getHaveBeenRead());
-        assertEquals(false, book1.isHaveBeenReadThrough());
+        assertTrue(book1.getHaveBeenRead());
+        assertFalse(book1.isHaveBeenReadThrough());
         for(int i = 0; i < 99; i++) {
             book1.read();
         }
-        assertEquals(true, book1.getHaveBeenRead());
-        assertEquals(true, book1.isHaveBeenReadThrough());
+        assertTrue(book1.getHaveBeenRead());
+        assertTrue(book1.isHaveBeenReadThrough());
         assertEquals(100, book1.getProgressInPercent());
 
     }
-
-    @Test
-    void testBooks() {
-
-    }
-
-
 
 }

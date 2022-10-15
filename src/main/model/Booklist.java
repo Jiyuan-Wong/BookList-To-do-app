@@ -1,43 +1,32 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Booklist {
+
+    private String listName;
     private ArrayList<Books> booklist = new ArrayList<Books>();
 
-    private static Books book1 = new Books("Discrete Mathematics and Its Applications",
-            "e-book", "books for study");
-    private static Books book2 = new Books("The old man and the sea", "real_book", "book for fun");
-
-    protected void addInitialBooksToBooklist() {
-        booklist.add(book1);
-        booklist.add(book2);
+    public Booklist(String listName) {
+        this.listName = listName;
     }
 
-    protected void listAllBooksInBooklist() {
-        System.out.println(" NAME\t\t|\tTYPE\t|\tCATEGORY\t|");
-        System.out.println("______________________________________________________________________________");
-        for (int i = 0; i < booklist.size(); i++) {
-            System.out.println(booklist.get(i).getBookName() + booklist.get(i).getBookType()
-                    + booklist.get(i).getCategoryOfTheBook());
-        }
+    public List<Books> addBook(Books book) {
+        booklist.add(book);
+        return null;
     }
 
-    protected void listAllBookNamesInBooklist() {
-        for (int i = 0; i < booklist.size(); i++) {
-            System.out.println(booklist.get(i).getBookName());
-        }
+    public void removeBook(Books book) {
+        booklist.remove(book);
     }
 
-    protected void listAllBookTypeInBooklist() {
-        for (int i = 0; i < booklist.size(); i++) {
-            System.out.println(booklist.get(i).getBookType());
-        }
+    public String getListName() {
+        return listName;
     }
 
-    protected void listAllBookCategoryInBooklist() {
-        for (int i = 0; i < booklist.size(); i++) {
-            System.out.println(booklist.get(i).getCategoryOfTheBook());
-        }
+    public int getListSize() {
+        return booklist.size();
     }
+
 }
