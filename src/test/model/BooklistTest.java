@@ -29,6 +29,12 @@ public class BooklistTest {
     }
 
     @Test
+    void testRemoveBook() {
+        booklist.removeBook(book1);
+        assertEquals(0,booklist.getListSize());
+    }
+
+    @Test
     void testBooklist() {
         assertEquals("Booklist1", booklist.getListName());
     }

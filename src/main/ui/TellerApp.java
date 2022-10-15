@@ -8,6 +8,9 @@ public class TellerApp {
     private Books books;
     private Scanner input;
 
+    public static void main(String[] args) {
+
+    }
 
 
 }
