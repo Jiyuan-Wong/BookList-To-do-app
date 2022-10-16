@@ -21,9 +21,17 @@ public class BooklistTest {
 
     @Test
     void testAddBook() {
-        List<Books> book = booklist.addBook(book1);
+        booklist.addBook(book1);
         assertEquals(1,booklist.getListSize());
     }
+
+
+    @Test
+    void testgetIndex() {
+        assertEquals(book1 ,booklist.getIndex(0));
+        assertEquals(1,booklist.getListSize());
+    }
+
 
     @Test
     void testRemoveBook() {

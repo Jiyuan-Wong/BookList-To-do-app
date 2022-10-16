@@ -35,6 +35,10 @@ public class Booklist {
         booklist.remove(index);
     }
 
+
+    // REQUIRES: book != null
+    // MODIFIES: this
+    // EFFECTS: get the index of the book in the book list
     public Books getIndex(int index) {
         return booklist.get(index);
     }
