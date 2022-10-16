@@ -28,15 +28,19 @@ public class BooklistTest {
 
     @Test
     void testgetIndex() {
-        assertEquals(book1 ,booklist.getIndex(0));
+        booklist.addBook(book1);
         assertEquals(1,booklist.getListSize());
+        assertEquals(book1,booklist.getIndex(0));
     }
 
 
     @Test
     void testRemoveBook() {
-        booklist.removeBook(0);
         assertEquals(0,booklist.getListSize());
+        booklist.addBook(book1);
+        assertEquals(1,booklist.getListSize());
+        booklist.removeBook(0);
+        assertEquals(0, booklist.getListSize());
     }
 
     @Test
