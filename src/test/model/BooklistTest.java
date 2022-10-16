@@ -1,12 +1,9 @@
 package model;
 
+// Test the methods in class Booklist are working
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import java.awt.print.Book;
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,7 +27,7 @@ public class BooklistTest {
 
     @Test
     void testRemoveBook() {
-        booklist.removeBook(book1);
+        booklist.removeBook(0);
         assertEquals(0,booklist.getListSize());
     }
 

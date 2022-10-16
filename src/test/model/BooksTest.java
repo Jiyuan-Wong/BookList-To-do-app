@@ -1,5 +1,6 @@
 package model;
 
+// Test the methods in class Books are working
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
