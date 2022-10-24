@@ -11,21 +11,33 @@ public class TellerApp {
     static Booklist booklist = new Booklist("new book list");
 
     public static void main(String[] args) {
-        String optionEntered = userinterface();
-        if (optionEntered.equals("1")) {
-            addMethod();
-        } else if (optionEntered.equals("2")) {
-            view();
-        } else if (optionEntered.equals("3")) {
-            mark();
-        } else if (optionEntered.equals("4")) {
-            viewSingleBook();
-        } else if (optionEntered.equals("5")) {
-            remove();
-        } else if (optionEntered.equals("6")) {
-            System.out.println("Goodbye!");
-        } else {
-            System.out.println("Invalid input, please try again! ");
+        runapp();
+    }
+
+    public TellerApp() {
+        runapp();
+    }
+
+    public static void runapp() {
+        boolean keepgoing = true;
+        while (keepgoing) {
+            String optionEntered = userinterface();
+            if (optionEntered.equals("1")) {
+                addMethod();
+            } else if (optionEntered.equals("2")) {
+                view();
+            } else if (optionEntered.equals("3")) {
+                mark();
+            } else if (optionEntered.equals("4")) {
+                viewSingleBook();
+            } else if (optionEntered.equals("5")) {
+                remove();
+            } else if (optionEntered.equals("6")) {
+                keepgoing = false;
+                System.out.println("Goodbye!");
+            } else {
+                System.out.println("Invalid input, please try again! ");
+            }
         }
     }
 

@@ -12,5 +12,7 @@ specific names
 - As a user, I want to know the progress in percent of the reading of one book.
 - As a user, I want to remove a book from my reading list.
 - As a user, I want to see the number of books in my reading list and the number of books that have been read.
+- As a user, I want to be able to save my book list to file.
+- As a user, I want to be able to be able to load my existing book list from file.
 
 **Thank you for reading this!**
