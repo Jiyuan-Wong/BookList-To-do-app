@@ -1,6 +1,7 @@
 package model;
 
 // Test the methods in class Books are working
+import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -30,15 +31,16 @@ class BooksTest {
         assertFalse(book1.getHaveBeenRead());
         assertFalse(book1.isHaveBeenReadThrough());
         book1.read();
-        assertEquals(1,book1.getProgressInPercent());
+        assertEquals(1, book1.getProgressInPercent());
         assertTrue(book1.getHaveBeenRead());
         assertFalse(book1.isHaveBeenReadThrough());
-        for(int i = 0; i < 99; i++) {
+        for (int i = 0; i < 99; i++) {
             book1.read();
         }
         assertTrue(book1.getHaveBeenRead());
         assertTrue(book1.isHaveBeenReadThrough());
         assertEquals(100, book1.getProgressInPercent());
+
 
     }
 

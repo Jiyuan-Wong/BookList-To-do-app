@@ -1,7 +1,10 @@
 package model;
 
+import org.json.JSONObject;
+import persistence.Writable;
+
 // Represents a book that will be listed in the book list
-public class Books {
+public class Books implements Writable {
 
     //Fields to represent name, type, category, progress and the condition about reading of the book
     private final String bookName;
@@ -74,6 +77,14 @@ public class Books {
         if (progressInPercent >= 100) {
             haveBeenReadThrough = true;
         }
+    }
+
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("name", bookName);
+        json.put("type", bookType);
+        json.put("category", categoryOfTheBook);
+        return json;
     }
 
 

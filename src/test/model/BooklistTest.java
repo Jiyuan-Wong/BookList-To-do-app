@@ -48,4 +48,8 @@ public class BooklistTest {
         assertEquals("Booklist1", booklist.getListName());
     }
 
+    @Test
+    void testgetBooklist() {
+
+    }
 }
