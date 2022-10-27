@@ -9,20 +9,20 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Booklist implements Writable {
+public class BookList implements Writable {
 
 
     //Fields to represent name of book list and itself
     private final String listName;
-    private final ArrayList<Books> booklist;
+    private final ArrayList<Books> bookList;
 
 
     // REQUIRES: listName != null
     // MODIFIES: this
     // EFFECTS: returns the name of the book
-    public Booklist(String listName) {
+    public BookList(String listName) {
         this.listName = listName;
-        booklist = new ArrayList<>();
+        bookList = new ArrayList<>();
     }
 
 
@@ -34,7 +34,7 @@ public class Booklist implements Writable {
 
     // EFFECTS: returns an unmodifiable list of books in this book list
     public List<Books> getBookList() {
-        return Collections.unmodifiableList(booklist);
+        return Collections.unmodifiableList(bookList);
     }
 
 
@@ -42,7 +42,7 @@ public class Booklist implements Writable {
     // MODIFIES: this
     // EFFECTS: add the book in the book list named booklist
     public List<Books> addBook(Books book) {
-        booklist.add(book);
+        bookList.add(book);
         return null;
     }
 
@@ -51,7 +51,7 @@ public class Booklist implements Writable {
     // MODIFIES: this
     // EFFECTS: remove the book from the book list named booklist by search the name
     public void removeBook(int index) {
-        booklist.remove(index);
+        bookList.remove(index);
     }
 
 
@@ -59,16 +59,16 @@ public class Booklist implements Writable {
     // MODIFIES: this
     // EFFECTS: get the index of the book in the book list
     public Books getIndex(int index) {
-        return booklist.get(index);
+        return bookList.get(index);
     }
 
 
     // EFFECTS: returns the size of the book list
     public int getListSize() {
-        return booklist.size();
+        return bookList.size();
     }
 
-    //@Override
+    @Override
     public JSONObject toJson() {
         JSONObject json = new JSONObject();
         json.put("name", listName);
@@ -76,10 +76,11 @@ public class Booklist implements Writable {
         return json;
     }
 
+    // EFFECTS: returns things in this book list as a JSON array
     private JSONArray thingiesToJson() {
         JSONArray jsonArray = new JSONArray();
 
-        for (Books t : booklist) {
+        for (Books t : bookList) {
             jsonArray.put(t.toJson());
         }
         return jsonArray;

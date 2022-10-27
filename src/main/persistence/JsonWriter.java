@@ -1,6 +1,6 @@
 package persistence;
 
-import model.Booklist;
+import model.BookList;
 import org.json.JSONObject;
 
 
@@ -26,7 +26,7 @@ public class JsonWriter {
 
     // MODIFIES: this
     // EFFECTS: writes JSON representation of workroom to file
-    public void write(Booklist bl) {
+    public void write(BookList bl) {
         JSONObject json = bl.toJson();
         saveToFile(json.toString(TAB));
     }

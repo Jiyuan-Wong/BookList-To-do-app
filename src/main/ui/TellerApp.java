@@ -1,7 +1,7 @@
 package ui;
 // User interface
 
-import model.Booklist;
+import model.BookList;
 import model.Books;
 import persistence.JsonReader;
 import persistence.JsonWriter;
@@ -10,20 +10,18 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
-import static persistence.JsonWriter.*;
-
 // Represents the book list application
 public class TellerApp {
     private static final String JSON_STORE = "./data/workroom.json";
     private Scanner input;
-    private Booklist booklist;
+    private BookList booklist;
     private JsonWriter jsonWriter;
     private JsonReader jsonReader;
 
     // EFFECTS: constructs book list and runs application
     public TellerApp() throws FileNotFoundException {
         input = new Scanner((System.in));
-        booklist = new Booklist("New Book List");
+        booklist = new BookList("New Book List");
         jsonWriter = new JsonWriter(JSON_STORE);
         jsonReader = new JsonReader(JSON_STORE);
         runapp();

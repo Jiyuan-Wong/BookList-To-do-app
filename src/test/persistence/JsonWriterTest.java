@@ -1,6 +1,6 @@
 package persistence;
 
-import model.Booklist;
+import model.BookList;
 import model.Books;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +14,7 @@ class JsonWriterTest extends JsonTest {
     @Test
     void testWriterInvalidFile() {
         try {
-            Booklist bl = new Booklist("My book list");
+            BookList bl = new BookList("My book list");
             JsonWriter writer = new JsonWriter("./data/my\0illegal:fileName.json");
             writer.open();
             fail("IOException was expected");
@@ -27,7 +27,7 @@ class JsonWriterTest extends JsonTest {
     @Test
     void testWriterEmptyWorkroom() {
         try {
-            Booklist bl = new Booklist("My book list");
+            BookList bl = new BookList("My book list");
             JsonWriter writer = new JsonWriter("./data/myFile.json");
             writer.open();
             writer.write(bl);
@@ -45,7 +45,7 @@ class JsonWriterTest extends JsonTest {
     @Test
     void testWriterGeneralWorkroom() {
         try {
-            Booklist bl = new Booklist("My book list");
+            BookList bl = new BookList("My book list");
             bl.addBook(new Books("name1", "type1", "category1"));
             bl.addBook(new Books("name2", "type2", "category2"));
             JsonWriter writer = new JsonWriter("./data/myFile.json");

@@ -4,17 +4,15 @@ package model;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BooklistTest {
-    private Booklist booklist;
+    private BookList booklist;
     private Books book1;
 
     @BeforeEach
     void runBefore() {
-        booklist = new Booklist("Booklist1");
+        booklist = new BookList("Booklist1");
         book1 = new Books("Discrete Mathematics and Its Applications",
                 "e-book", "books for study");
     }

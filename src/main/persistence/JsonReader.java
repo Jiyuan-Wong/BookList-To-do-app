@@ -1,6 +1,6 @@
 package persistence;
 
-import model.Booklist;
+import model.BookList;
 
 
 import java.io.IOException;
@@ -23,7 +23,7 @@ public class JsonReader {
 
     // EFFECTS: reads workroom from file and returns it;
     // throws IOException if an error occurs reading data from file
-    public Booklist read() throws IOException {
+    public BookList read() throws IOException {
         String jsonData = readFile(source);
         JSONObject jsonObject = new JSONObject(jsonData);
         return parseWorkRoom(jsonObject);
@@ -41,31 +41,31 @@ public class JsonReader {
     }
 
     // EFFECTS: parses workroom from JSON object and returns it
-    private Booklist parseWorkRoom(JSONObject jsonObject) {
+    private BookList parseWorkRoom(JSONObject jsonObject) {
         String name = jsonObject.getString("name");
-        Booklist bl = new Booklist(name);
+        BookList bl = new BookList(name);
         addThingies(bl, jsonObject);
         return bl;
     }
 
-    // MODIFIES: wr
+    // MODIFIES: bl
     // EFFECTS: parses thingies from JSON object and adds them to workroom
-    private void addThingies(Booklist wr, JSONObject jsonObject) {
+    private void addThingies(BookList bl, JSONObject jsonObject) {
         JSONArray jsonArray = jsonObject.getJSONArray("thingies");
         for (Object json : jsonArray) {
             JSONObject nextThingy = (JSONObject) json;
-            addThingy(wr, nextThingy);
+            addThingy(bl, nextThingy);
         }
     }
 
-    // MODIFIES: wr
+    // MODIFIES: bl
     // EFFECTS: parses thingy from JSON object and adds it to workroom
-    private void addThingy(Booklist wr, JSONObject jsonObject) {
+    private void addThingy(BookList bl, JSONObject jsonObject) {
         String name = jsonObject.getString("name");
         String category = jsonObject.getString("category");
         String type = jsonObject.getString("type");
         Books thingy = new Books(name, type, category);
-        wr.addBook(thingy);
+        bl.addBook(thingy);
     }
 }
 
