@@ -17,9 +17,10 @@ specific names
 
 # Instructions for Grader
 
-- You can hit the first button related to adding books to book list Y.
-- You can view book list by hitting the second button, and see one .jpg picture plus a note that message is already in the consloe.
-- You can load the current book list by hitting the third button.
-- You can save the state of the book list by hitting the last button
+- You can hit the first button related to adding books to book list, when you hit the first button, it will pop up a new window to let you fill the name, type and category of the book you want to add, after filling the information, you can click the button named 'submit', then the information of this book will be added into the book list.
+- You can view book list by hitting the second button, and see one .jpg picture plus a note that message is already in the console.
+- You can locate my visual component after hitting the second button, it will show up a puppy picture in the new window.
+- You can load the current book list by hitting the third button, still you must click the second button if you want to check the book list that have been loaded, you can see the information that the current status is already loaded in the console.
+- You can save the state of the book list by hitting the last button, you can see the information that the current status is already saved in the console.
 
 **Thank you for reading this!**
