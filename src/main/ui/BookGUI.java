@@ -27,7 +27,6 @@ public class BookGUI implements ActionListener {
 
     JButton btn = new JButton("view current book list");
     JButton btn2 = new JButton("add book to book list");
-    //JButton botton1 = new JButton("add book to book list");
     JButton botton2 = new JButton("saves current book list");
     JButton botton3 = new JButton("loads current book list");
     final JTextArea textArea = new JTextArea(5, 10);
@@ -61,7 +60,6 @@ public class BookGUI implements ActionListener {
 
     public void addThingsToFrame() {
         panel.add(textArea);
-        //panel.add(botton1);
         panel.add(btn2);
         panel.add(btn);
         panel.add(botton2);
@@ -102,20 +100,21 @@ public class BookGUI implements ActionListener {
         textArea.append("This book list have been loaded\n");
     }
 
-    private static JLabel name = new JLabel("Book name: ");
-    private static JTextField userName = new JTextField(20);
-    private static JLabel type = new JLabel("Book type: ");
-    private static JTextField userType = new JTextField();
-    private static JLabel category = new JLabel("Book category: ");
-    private static JTextField userCate = new JTextField();
-    private static JButton button = new JButton("Submit");
-    private static JLabel success = new JLabel("");
+    private static final JLabel name = new JLabel("Book name: ");
+    private static final JTextField userName = new JTextField(20);
+    private static final JLabel type = new JLabel("Book type: ");
+    private static final JTextField userType = new JTextField();
+    private static final JLabel category = new JLabel("Book category: ");
+    private static final JTextField userCate = new JTextField();
+    private static final JButton button = new JButton("Submit");
+    private static final JLabel success = new JLabel("");
 
     JFrame newJFrame = new JFrame("Enter the name, type and category: ");
     JPanel jpanel = new JPanel(new GridLayout(4, 2));
 
 
     public void addBookNewWindow(JFrame addNewWindow) {
+        jpanel.setSize(500, 500);
         newJFrame.setSize(2500, 2500);
         newJFrame.setLocationRelativeTo(addNewWindow);
         newJFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -161,11 +160,11 @@ public class BookGUI implements ActionListener {
 
     public  void showNewWindow(JFrame relativeWindow) {
         JFrame newJFrame = new JFrame("view the book list");
-        newJFrame.setSize(2500, 2500);
+        newJFrame.setSize(500, 500);
         newJFrame.setLocationRelativeTo(relativeWindow);
         newJFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         newJFrame.setResizable(true);
-        JPanel panel = new JPanel(new GridLayout(25, 25));
+        JPanel panel = new JPanel(new GridLayout(1, 1));
         int size = booklist.getListSize();
         for (int i = 0; i < size; i++) {
             textArea.append("Name: " + booklist.getIndex(i).getBookName() + " Type: "
@@ -178,7 +177,8 @@ public class BookGUI implements ActionListener {
         label.setVerticalAlignment(SwingConstants.CENTER);
         panel.add(label);
         JLabel label111 = new JLabel();
-        label111.setIcon(new ImageIcon("data/tobs.jpg"));//文件路径
+        label111.setIcon(new ImageIcon("data/tobs.jpg"));
+        label111.setBounds(2,2,2,2);
         panel.add(label111);
         newJFrame.setContentPane(panel);
         newJFrame.setVisible(true);
