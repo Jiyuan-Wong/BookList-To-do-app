@@ -1,15 +1,4 @@
 {
-    "thingies": [
-        {
-            "name": "name1",
-            "type": "type1",
-            "category": "category1"
-        },
-        {
-            "name": "name2",
-            "type": "type2",
-            "category": "category2"
-        }
-    ],
-    "name": "My book list"
+    "thingies": [],
+    "name": "list name"
 }

@@ -15,4 +15,11 @@ specific names
 - As a user, I want to be able to save my book list to file.
 - As a user, I want to be able to be able to load my existing book list from file.
 
+# Instructions for Grader
+
+- You can hit the first button related to adding books to book list Y.
+- You can view book list by hitting the second button, and see one .jpg picture plus a note that message is already in the consloe.
+- You can load the current book list by hitting the third button.
+- You can save the state of the book list by hitting the last button
+
 **Thank you for reading this!**

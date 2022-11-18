@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 // Represents the book list application
 public class TellerApp {
-    private static final String JSON_STORE = "./data/workroom.json";
+    private static final String JSON_STORE = "./data/myFile.json";
     private Scanner input;
     private BookList booklist;
     private JsonWriter jsonWriter;
