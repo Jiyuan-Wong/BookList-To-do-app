@@ -1,4 +1,8 @@
 {
-    "thingies": [],
+    "thingies": [{
+        "name": "Harry Potter",
+        "type": "fiction",
+        "category": "e-book"
+    }],
     "name": "list name"
 }

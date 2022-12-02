@@ -1,5 +1,6 @@
 package model;
 
+
 // Represents a book list that will be added by books
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -42,15 +43,19 @@ public class BookList implements Writable {
     // MODIFIES: this
     // EFFECTS: add the book in the book list named booklist
     public List<Books> addBook(Books book) {
+        EventLog.getInstance().logEvent(new Event("Added book in the book list: " + book.getBookName()));
         bookList.add(book);
         return null;
     }
+
 
 
     // REQUIRES: book != null
     // MODIFIES: this
     // EFFECTS: remove the book from the book list named booklist by search the name
     public void removeBook(int index) {
+        EventLog.getInstance().logEvent(
+                new Event("Removed book in the book list: " + bookList.get(index).getBookName()));
         bookList.remove(index);
     }
 
@@ -73,6 +78,8 @@ public class BookList implements Writable {
         JSONObject json = new JSONObject();
         json.put("name", listName);
         json.put("thingies", thingiesToJson());
+        EventLog.getInstance().logEvent(
+                new Event("The current book list have been saved, list name: " + bookList.toString()));
         return json;
     }
 
