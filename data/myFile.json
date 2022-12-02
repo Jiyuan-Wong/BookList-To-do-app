@@ -1,8 +1,15 @@
 {
-    "thingies": [{
-        "name": "Harry Potter",
-        "type": "fiction",
-        "category": "e-book"
-    }],
+    "thingies": [
+        {
+            "name": "Harry Potter",
+            "type": "Fiction",
+            "category": "e-book"
+        },
+        {
+            "name": "The man and the sea",
+            "type": "Fiction",
+            "category": "real book"
+        }
+    ],
     "name": "list name"
 }

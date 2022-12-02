@@ -159,6 +159,8 @@ public class BookGUI implements ActionListener, WindowListener {
         addThingsToFrame3();
     }
 
+    // MODIFIES: this
+    // EFFECTS: add those functions in the removeBookNewWindow method to avoid the checkstyle.
     public void addThingsToFrame3() {
         jpanel1.add(name1);
         jpanel1.add(userName1);
@@ -168,6 +170,8 @@ public class BookGUI implements ActionListener, WindowListener {
         newJFrame1.setVisible(true);
     }
 
+    // MODIFIES: this
+    // EFFECTS: create a new window when the second button is clicked, also an image will show up.
     public void addBookNewWindow(JFrame addNewWindow) {
         jpanel.setSize(500, 500);
         newJFrame.setSize(2500, 2500);
@@ -217,17 +221,23 @@ public class BookGUI implements ActionListener, WindowListener {
         textArea.append("New book have been added!\n");
     }
 
+    // MODIFIES: this
+    // EFFECTS: add those functions in the removeBookNewWindow to avoid the checkstyle.
     private void remove(ActionEvent event) {
         String indexString = userName1.getText();
         int index = Integer.parseInt(indexString);
-        Books bookToBeRemoved = booklist.getIndex(index);
-        booklist.removeBook(index);
-        textArea.append(bookToBeRemoved.getBookName() + " have been removed!\n");
+        try {
+            Books bookToBeRemoved = booklist.getIndex(index);
+            booklist.removeBook(index);
+            textArea.append(bookToBeRemoved.getBookName() + " have been removed!\n");
+        } catch (IndexOutOfBoundsException e) {
+            textArea.append("Index you entered is not existing");
+        }
     }
 
 
     // MODIFIES: this
-    // EFFECTS: create a new window when the second button is clicked, also an image will show up.
+    // EFFECTS: create a new window when the third button is clicked, also an image will show up.
     public void showNewWindow(JFrame relativeWindow) {
         JFrame newJFrame = new JFrame("view the book list");
         newJFrame.setSize(500, 500);

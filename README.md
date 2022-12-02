@@ -18,9 +18,21 @@ specific names
 # Instructions for Grader
 
 - You can hit the first button related to adding books to book list, when you hit the first button, it will pop up a new window to let you fill the name, type and category of the book you want to add, after filling the information, you can click the button named 'submit', then the information of this book will be added into the book list.
-- You can view book list by hitting the second button, and see one .jpg picture plus a note that message is already in the console.
-- You can locate my visual component after hitting the second button, it will show up a puppy picture in the new window.
-- You can load the current book list by hitting the third button, still you must click the second button if you want to check the book list that have been loaded, you can see the information that the current status is already loaded in the console.
+- You can hit the second button related to removing books to book list, when you hit the second button, it will pop up a new window to let you fill the number of index of the book you want to remove, after filling the information, you can click the button named 'submit', then this book will be out of the list.
+- You can view book list by hitting the third button, and see one .jpg picture plus a note that message is already in the console.
+- You can locate my visual component after hitting the third button, it will show up a puppy picture in the new window.
+- You can load the current book list by hitting the forth button, still you must click the second button if you want to check the book list that have been loaded, you can see the information that the current status is already loaded in the console.
 - You can save the state of the book list by hitting the last button, you can see the information that the current status is already saved in the console.
+
+# Phase 4: Task 2
+- Thu Dec 01 22:33:14 PST 2022
+- Added book in the book list: Harry Potter
+- Thu Dec 01 22:33:14 PST 2022
+- Added book in the book list: The man and the sea
+- Thu Dec 01 22:33:31 PST 2022
+- Added book in the book list: 1
+- Thu Dec 01 22:33:39 PST 2022
+- Removed book in the book list: The man and the sea
+
 
 **Thank you for reading this!**
