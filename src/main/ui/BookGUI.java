@@ -231,7 +231,7 @@ public class BookGUI implements ActionListener, WindowListener {
             booklist.removeBook(index);
             textArea.append(bookToBeRemoved.getBookName() + " have been removed!\n");
         } catch (IndexOutOfBoundsException e) {
-            textArea.append("Index you entered is not existing");
+            textArea.append("Index you entered is not existing\n");
         }
     }
 

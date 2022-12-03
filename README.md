@@ -34,5 +34,8 @@ specific names
 - Thu Dec 01 22:33:39 PST 2022
 - Removed book in the book list: The man and the sea
 
+# Phase 4: Task 3
+
+- If I had more time to work on this project, I would improve the relationship structure of the whole project. Because my project's current relationships are too simple, the project's cohesion and coupling must be improved to prevent the whole system from crashing if one class makes a mistake. Also, if the opportunity arises, code refinement should be implemented. This would not only solve the obscurity of the code, but would also allow others to take over the project with less time to familiarise themselves with the whole project.
 
 **Thank you for reading this!**
